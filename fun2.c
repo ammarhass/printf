@@ -6,27 +6,26 @@
  *
  * @ch: character that will determine which function to call
  *
- * @Return: pointer to the print function
+ * Return: pointer to the print function
  */
 
 int (*choose_print(char ch))(va_list)
 {
 	unsigned int k = 0;
 
-	print_st list [] = {
-		{'s', p_string},
-		{'c', P_char},
-		{'i', P_integer},
-		{'d', P_integer},
-		{'\0', NULL}
+	print_st list[] = {
+		{P_string, 's'},
+		{P_char, 'c'},
+		{NULL, '\0'}
 	};
 
 	while (list[k].c != '\0')
 	{
-		if (ch == list.c)
+		if (ch == list[k].c)
 		{
 			return (list[k].p);
 		}
+		k++;
 	}
 
 	return (NULL);

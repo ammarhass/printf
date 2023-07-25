@@ -9,9 +9,9 @@
  * Return: number of char that printed to the stdout
  */
 
-int p_char(va_list p)
+int P_char(va_list p)
 {
-	return (_putchar(va_arg(p, int));
+	return (_putchar(va_arg(p, int)));
 }
 
 /**
@@ -21,7 +21,7 @@ int p_char(va_list p)
  * Return: length of the string
  */
 
-int print_string(va_list p)
+int P_string(va_list p)
 {
 	char *str;
 
