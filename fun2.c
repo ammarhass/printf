@@ -16,6 +16,8 @@ int (*choose_print(char ch))(va_list)
 	print_st list[] = {
 		{P_string, 's'},
 		{P_char, 'c'},
+		{P_integer, 'd'},
+		{P_integer, 'i'},
 		{NULL, '\0'}
 	};
 

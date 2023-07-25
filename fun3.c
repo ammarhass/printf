@@ -39,3 +39,8 @@ int P_string(va_list p)
 
 	return (strlen(str));
 }
+
+int P_integer(va_list p)
+{
+	return (print_num(va_arg(p, int)));
+}

@@ -25,7 +25,8 @@ int (*choose_print(char ch))(va_list);
 int _printf(const char *format, ...);
 int P_char(va_list p);
 int P_string(va_list p);
+int P_integer(va_list p);
 int _putchar(char c);
-void print_num(int num);
+int print_num(long int num);
 
 #endif

@@ -21,18 +21,21 @@ int _putchar(char c)
 * Return: Nothing
 */
 
-void print_num(int num)
+int print_num(long int num)
 {
+	int count1 = 1;
+
 	if (num < 0)
 	{
 		_putchar('-');
 		num = -num;
+		count1++;
 	}
 
 	if (num / 10)
 	{
-		print_num(num / 10);
+		count1 += print_num(num / 10);
 	}
-
 	_putchar(num % 10 + '0');
+	return (count1);
 }
