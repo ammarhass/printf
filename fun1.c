@@ -1,12 +1,17 @@
 #include<limits.h>
 #include<unistd>
 #include"main.h"
+/**
+ * _printf - function that produces output according to a format
+ *
+ * @format: pointer to const char
+ * Return: number of character that will be printed in the stdout
+ */
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
 	va_list p;
-	int ch_counter = 0;
+	int ch_counter = 0, i = 0;
 
 	if (format == NULL)
 		return (-1);
@@ -37,15 +42,13 @@ int _printf(const char *format, ...)
 				ch_counter++;
 			}
 		}
-
 		else
 		{
 			_putchar(format[i]);
 			ch_counter++;
 		}
 		i++;
-	}		
-		
+	}
 	return (ch_counter);
 }
 
